@@ -1,0 +1,17 @@
+.contenedorimagen {
+    text-align: center;
+}
+
+.contenedorimagen a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.contenedorimagen a:nth-child(3) {
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+.contenedorimagen img {
+   width: 300px;
+}
