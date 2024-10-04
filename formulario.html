@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de acceso a ciclos formativos</title>
+    <style>
+        #datos-personales{
+            background-color: #8E8097;
+        }
+        #forma-acceso{
+            background-color: #798EAC;
+        }
+        #doc-adjuntos{
+            background-color: #5D8A63;
+        }
+        legend{
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>INFORMACIÓN DE ACCESO A LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h1>
+
+    <form>
+        <fieldset id="datos-personales">
+            <legend>Datos Personales</legend>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos"><br><br>
+
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni"><br><br>
+
+            <label for="lugar_nacimiento">Lugar de Nacimiento:</label>
+            <input type="text" id="lugar_nacimiento" name="lugar_nacimiento"><br><br>
+
+            <label for="provincia">Provincia:</label>
+            <select id="provincia" name="provincia">
+                <option value="Cáceres">Cáceres</option>
+                <option value="Badajoz">Badajoz</option>
+            </select><br><br>
+
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br><br>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion"><br><br>
+
+            <label for="codigo_postal">Código Postal:</label>
+            <input type="text" id="codigo_postal" name="codigo_postal"><br><br>
+
+        </fieldset>
+
+        <fieldset id="forma-acceso">
+            <legend>Forma de Acceso</legend>
+        
+            <label><input type="radio" name="forma_acceso" value="directo"> Directo</label><br><br>
+        
+            <div style="margin-left: 20px;">
+                <label><input type="radio" name="opcion_directo" value="bachillerato"> Bachillerato</label><br><br>
+        
+                <label><input type="radio" name="opcion_directo" value="universidad"> Universidad</label><br><br>
+        
+                <label><input type="radio" name="opcion_directo" value="grado_medio"> Grado Medio</label><br><br>
+        
+                <label><input type="radio" name="opcion_directo" value="otros"> Otros (especifique):</label>
+                <input type="text" id="otros" name="otros"><br><br>
+            </div>
+        
+            <label><input type="radio" name="forma_acceso" value="prueba_libre"> Prueba Libre</label><br><br>
+        
+        </fieldset>
+        
+        
+        <fieldset id="doc-adjuntos">
+            <legend>Documentos Adjuntos</legend>
+
+            <label><input type="checkbox" name="documentos" value="fotocopia_dni"> Fotocopia DNI</label><br><br>
+            <label><input type="checkbox" name="documentos" value="certificado_academico"> Certificado Académico</label><br><br>
+
+            <label for="otros_documentos">Otros documentos (especifique):</label>
+            <input type="text" id="otros_documentos" name="otros_documentos"><br><br>
+
+        </fieldset>
+
+        <input type="submit" value="Enviar Solicitud">
+
+    </form>
+
+</body>
+</html>
