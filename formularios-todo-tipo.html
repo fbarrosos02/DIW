@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario todo tipo</title>
+    <style>
+   body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 1em;
+    border-radius: 1em;
+    
+}
+
+label, p {
+    margin-bottom: .5em;
+    color: #333333;
+}
+
+input, select {
+    width: 100%;
+    padding: .8em;
+    margin-bottom: 1em;
+    border: 1px solid #CCCCCC;
+
+}
+
+button {
+    padding: 1em;
+    border-radius: 4px;
+}
+    </style>
+</head>
+<body>
+<form action="procesar.php" method="post" id="form1">
+    <label for="usuario">Usuario</label>
+    <br>
+    <input type="text" name="usuario">
+    <br>
+    <label for="contraseña">Contraseña</label>
+    <br>
+    <input type="password" name="contraseña" id="pswd">
+    <br>
+    <button type="submit">Enviar</button>
+</form>
+<br>
+<form action="procesar.php" method="post" id="form2">
+    <label for="usuario">Usuario</label>
+    <br>
+    <input type="text" name="usuario" placeholder="Nombre del viajero">
+    <br>
+    <p>Tipo de pasaje</p>
+    <select name="tipo-pasaje" id="tipo-pasaje">
+        <optgroup>
+            <option value="vip">Vip</option>ç
+            <option value="especial">Especial</option>
+            <option value="primera">Primera</option>
+            <option value="segunda">Segunda</option>
+        </optgroup>
+    </select>
+    <br>
+    <button type="submit">Enviar</button>
+</form>
+<br>
+<form action="procesar.php" method="get">
+    <label for="articulo">Artículo</label>
+    <input type="text" placeholder="Artículo">
+    <br>
+    <label>
+         Entrega a domicilio <input type="radio" name="opcion" value="1"> 
+      <label>
+        Recogida en tienda<input type="radio" name="opcion" value="2"> 
+      </label>
+      <br>
+      <button type="submit">Enviar</button>
+</form>
+<br>
+<form action="procesar.php" method="get">
+    <label for="num-matricula">Numero de matrícula</label>
+    <input type="text" placeholder="Matrícula" id="matricula" name="matricula" pattern="M[0-9]{3}" required>
+    <br>
+    <p>Materias</p>
+    <br>
+    <label for="matematicas">Matematicas</label>
+    <input type="checkbox" name="matematicas" id="matematicas">
+    <br>
+    <label for="algoritmia">Algoritmia</label>
+    <input type="checkbox" name="algoritmia" id="algoritmia">
+    <br>
+    <label for="sistemas">Sistemas</label>
+    <input type="checkbox" name="sistemas" id="sistemas">
+    <br>
+    <label for="robotica">Robótica</label>
+    <input type="checkbox" name="robotica" id="robotica">
+    <br>
+    <button type="submit">Enviar</button>
+</form>
+<br>
+<form action="procesar.php" method="post">
+    <label for="nombre">Nombre</label>
+    <br>
+    <input type="text" name="nombre" id="nombre" placeholder="nombre">
+    <br>
+    <label for="email">E-mail</label>
+    <br>
+    <input type="email" name="email" id="email" placeholder="mail válido">
+    <br>
+    <label for="mensaje">Escriba su mensaje</label>
+    <br>
+    <textarea name="mensaje" id="mensaje" cols="40" rows="10"></textarea>
+    <input type="hidden" name="origen" value="página de contacto">
+    <br>
+    <button type="submit">Enviar</button>
+</form>
+<br>
+<form action="procesar.php" method="post">
+<label for="nombre">Nombre</label>
+<br>
+<input type="text" name="nombre" id="nombre" placeholder="nombre">
+<br>
+<label for="email">E-mail</label>
+<br>
+<input type="email" name="email" id="email" placeholder="personas">
+<br>
+<label for="fecha-llegada">Fecha de llegada</label>
+<br>
+<input type="date" name="fecha-llegada" id="fecha-llegada">
+<br>
+<label for="fecha-salida">Fecha de salida</label>
+<br>
+<input type="date" name="fecha-salida" id="fecha-salida">
+<br>
+<button type="submit">Enviar</button>
+</form>
+<br>
+<form action="procesar.php" method="post">
+    <label for="alias">Alias</label>
+    <br>
+    <input type="text" name="alias" id="alias" placeholder="alias">
+    <br>
+    <label for="email">E-mail</label>
+    <br>
+    <input type="email" name="email" id="email" placeholder="e-mail">
+    <br>
+    <label for="telefono">Teléfono</label>
+    <br>
+    <input type=" number" name="telefono" id="telefono" placeholder="telefono">
+    <br>
+    <button type="submit">Enviar</button>
+    <button type="reset">Resetar</button>
+</form>
+<br>
+<form action="procesar.php" method="get">
+    <label for="fruta">Fruta</label>
+    <select name="frutas" id="frutas">
+        <optgroup>
+            <option value="manzanas">Manzanas</option>
+            <option value="naranjas">Naranjas</option>
+            <option value="mandarinas">Mandarinas</option>
+        </optgroup>
+    </select>
+    <br>
+    <label for="cantidad">Cantidad</label>
+    <br>
+    <input type="text" name="cantidad" id="cantidad" pattern="\d+\s*(ud|kg|gr)">
+    <br>
+    <button type="submit">Enviar</button>
+</form>
+<br>
+<form action="procesar.php" method="get">
+    <label for="num-botellas">Número de botellas (en lotes de 3)</label>
+    <br>
+    <input type="number" name="num-botellas" id="num-botellas" step="3">
+    <br>
+    <button type="submit">Enviar</button>
+</form>
+<br>
+<form action="procesar.php" method="post">
+    <label for="nombre">Nombre</label>
+    <br>
+    <input type="text" name="nombre" id="nombre" placeholder="alias" required>
+    <br>
+    <label for="email">E-mail</label>
+    <br>
+    <input type="email" name="email" id="email" placeholder="e-mail" required>
+    <br>
+    <label for="telefono">Teléfono</label>
+    <br>
+    <input type=" number" name="telefono" id="telefono" placeholder="telefono">
+    <br>
+    <fieldset>
+        <legend>lenguajes que conoce</legend>
+        <label for="javascript">Javascript</label>
+    <input type="checkbox" name="javascript" id="javascript">
+    <br>
+    <label for="php">PHP</label>
+    <input type="checkbox" name="php" id="php">
+    <br>
+    <label for="nodejs">NodeJS</label>
+    <input type="checkbox" name="nodejs" id="nodejs">
+    <br>
+    <label for="python">Python</label>
+    <input type="checkbox" name="python" id="python">
+    </fieldset>
+    <br>
+    <p>Nivel de Inglés</p>
+    <br>
+    <label>
+        <input type="radio" name="nivel" value="bajo"> Bajo
+      </label>
+      <label>
+        <input type="radio" name="nivel" value="medio"> Medio
+      </label>
+      <label>
+        <input type="radio" name="nivel" value="alto"> Alto
+      </label>
+      <br>
+      <button type="submit">Enviar</button>
+
+</form>
+
+<br>
+
+</body>
+</html>
