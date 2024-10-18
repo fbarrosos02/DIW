@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profundizacion formularios 10</title>
+</head>
+<body>
+    <form action="procesar.php" method="get">
+        <label for="palabra-clave">Palabra clave: </label>
+        <input type="text" name="palabra-clave" id="palabra-clave" required>
+        <br>
+        <label for="categoria">Categoría: </label>
+        <select name="categoria" id="categoria">
+            <option value="todas">Todas</option>
+            <option value="electronica">Electrónica</option>
+            <option value="ropa">Ropa</option>
+            <option value="hogar">Hogar</option>
+        </select>
+        <br>
+        <label for="precio-min">Precio mínimo: </label>
+        <input type="number" name="precio-min" id="precio-min">
+        <br>
+        <label for="precio-max">Precio máximo: </label>
+        <input type="number" name="precio-max" id="precio-max">
+        <br>
+        <label for="ordenar">Ordenar por: </label>
+        <select name="ordenar" id="ordenar">
+            <option value="relevancia">Relevancia</option>
+            <option value="precio">Precio</option>
+        </select>
+        <br>
+        <button type="submit">Buscar</button>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profundizacion formularios 2</title>
+</head>
+<body>
+    <form action="procesar.php" method="get">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" maxlength="40" required title="Maximo 40 caracteres">
+        <br>
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" name="apellidos" id="apellidos" maxlength="60" required title="Maximo 60 caracteres">
+        <br>
+        <label for="edad">Edad: </label>
+        <input type="number" name="edad" id="edad" min="18" max="90" title="Nº entre 18 y 90">
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="contraseña">Contraseña: </label>
+        <input type="password" name="contraseña" id="contraseña">
+        <br>
+        <label for="genero">Genero: </label>
+        <span>Hombre</span><input type="radio" name="sexo" id="sexo" value="hombre">
+        <span>Mujer</span><input type="radio" name="sexo" id="sexo" value="mujer">
+        <span>Otro</span><input type="radio" name="sexo" id="sexo" value="otro">
+        <br>
+        <label for="dispositivos">Dispositivos seleccionables: </label>
+        <select name="dispositivos" id="dispositivos">
+            <optgroup>
+                <option  selected="true" disabled>seleccione el dispositivo</option>
+                <option value="Macbook">Macbook</option>
+                <option value="iPhone">iPhone</option>
+                <option value="iPad">iPad</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="fuente-referencia">Como nos conociste: </label>
+        <select name="fuente-referencia" id="fuente-referencia">
+            <optgroup>
+                <option value="red-social">Red Social</option>
+                <option  selected="true" value="buscador" >Buscador</option>
+                <option value="amigos">Amigos</option>
+                <option value="otros">Otros</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="normas"></label>
+        <input type="checkbox" name="normas" id="normas">
+        <span>Acepto las normas del club</span>
+        <br>
+        <button type="submit">Contactar</button>
+    </form>
+</body>
+</html>
