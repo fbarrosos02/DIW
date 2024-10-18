@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profundizacion formularios 3</title>
+    <style>
+        form{
+            max-width: 300px;
+            border: solid;
+            
+        }
+        .button-container {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="procesar.php" method="post">
+        <p>Datos personales</p>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" pattern="[A-Z][a-z].*" required title="Debe empezar por Mayuscula seguido de minuscula">
+        <br>
+        <label for="apellido">Apellido: </label>
+        <input type="text" name="apellido" id="apellido" pattern="[A-Z][a-z].*" required title="Debe empezar por Mayuscula seguido de minuscula">
+        <br>
+        <label for="membresia"></label>
+        <input type="checkbox" name="membresia" id="membresia" checked>
+        <span>¿Es miembro del club</span>
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+        <br>
+        <p>Datos del deporte</p>
+        <label for="nombredeporte">Nombre del deporte: </label>
+        <select name="nombredeporte" id="nombredeporte">
+            <optgroup>
+                <option value="paddle">Paddle</option>
+                <option value="squash">Squash</option>
+                <option value="tenis">Tenis</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="fechareserva">Fecha y hora de la reserva: </label>
+        <input type="datetime-local" name="fechareserva" id="fechareserva">
+        <div class="button-container">
+            <button type="submit">Enviar</button>
+        </div>    
+    </form> 
+</body>
+</html>

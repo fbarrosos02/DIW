@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profundizacion de formularios</title>
+</head>
+<body>
+    <form action="procesar.php" method="get">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" maxlength="20" required title="Max 20 Caracteres">
+        <br>
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" name="apellidos" id="apellidos" maxlength="20" required title="Max 20 caracteres">
+        <br>
+        <label for="sexo">Sexo: </label>
+        <span>Hombre</span><input type="radio" name="sexo" id="sexo" value="hombre">
+        <span>Mujer</span><input type="radio" name="sexo" id="sexo" value="mujer">
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="nov&ofertas"></label>
+        <input type="checkbox" name="nov&ofertas" id="nov&ofertas" checked>
+        <span>Deseo recibir información sobre novedades y ofertas</span>
+        <br>
+        <input type="checkbox" name="protdatos" id="protdatos" >
+        <span>Acepto las condiciones generales del sitio sobre protección de datos</span>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <form action="procesar.php" method="get">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" maxlength="40" required title="Maximo 40 caracteres">
+        <br>
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" name="apellidos" id="apellidos" maxlength="60" required title="Maximo 60 caracteres">
+        <br>
+        <label for="edad">Edad: </label>
+        <input type="number" name="edad" id="edad" min="18" max="90" title="Nº entre 18 y 90">
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="contraseña">Contraseña: </label>
+        <input type="password" name="contraseña" id="contraseña">
+        <br>
+        <label for="genero">Genero: </label>
+        <span>Hombre</span><input type="radio" name="sexo" id="sexo" value="hombre">
+        <span>Mujer</span><input type="radio" name="sexo" id="sexo" value="mujer">
+        <span>Otro</span><input type="radio" name="sexo" id="sexo" value="otro">
+        <br>
+        <label for="dispositivos">Dispositivos seleccionables: </label>
+        <select name="dispositivos" id="dispositivos">
+            <optgroup>
+                <option  selected="true" disabled>seleccione el dispositivo</option>
+                <option value="Macbook">Macbook</option>
+                <option value="iPhone">iPhone</option>
+                <option value="iPad">iPad</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="fuente-referencia">Como nos conociste: </label>
+        <select name="fuente-referencia" id="fuente-referencia">
+            <optgroup>
+                <option value="red-social">Red Social</option>
+                <option  selected="true" value="buscador" >Buscador</option>
+                <option value="amigos">Amigos</option>
+                <option value="otros">Otros</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="clausula-suscripcion"></label>
+        <input type="checkbox" name="clausula-suscripcion" id="clausula-suscripcion">
+        <span>Deseo subscribirne a la lista de correo</span>
+        <br>
+        <button type="submit">Contactar</button>
+    </form>
+    <br>
+    <form action="procesar.php" method="post">
+        <p>Datos personales</p>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" pattern="[A-Z][a-z]" required title="Debe empezar por Mayuscula seguido de minuscula">
+        <br>
+        <label for="apellido">Apellido: </label>
+        <input type="text" name="apellido" id="apellido" pattern="[A-Z][a-z]" required title="Debe empezar por Mayuscula seguido de minuscula">
+        <br>
+        <label for="membresia"></label>
+        <input type="checkbox" name="membresia" id="membresia" checked>
+        <span>¿Es miembro del club</span>
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+        <br>
+        <p>Datos del deporte</p>
+        <label for="nombredeporte">Nombre del deporte: </label>
+        <select name="nombredeporte" id="nombredeporte">
+            <optgroup>
+                <option value="paddle">Paddle</option>
+                <option value="squash">Squash</option>
+                <option value="tenis">Tenis</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="fechareserva">Fecha y hora de la reserva: </label>
+        <input type="datetime-local" name="fechareserva" id="fechareserva">
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <form action="procesar.php" method="post">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" name="apellidos" id="apellidos">
+        <br>
+        <label for="telefono">Telefono</label>
+        <input type="number" name="telefono" id="telefono" pattern="\d{3} \d{2} \d{2} \d{2}">
+        <br>
+        <label for="contraseña">Contraseña</label>
+        <input type="password" name="contraseña" id="contraseña" minlength="8" title="minimo 8 caracteres">
+        <br>
+        <label for="areas-interes">Areas de interes: </label>
+        <select name="areas-interes" id="areas-interes">
+            <optgroup>
+                <option value="programacion">Programacion</option>
+                <option value="diseño">Diseño</option>
+                <option value="ciencias">Ciencias</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="fecha-nacimiento">Fecha de nacimiento</label>
+        <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
+        <br>
+        <label for="clausula-aceptacion"></label>
+        <input type="checkbox" name="clausula-aceptacion" id="clausula-aceptacion">
+        <span>Acepto los térmnos de protección de datos</span>
+        <br>
+        <label for="submit">Enviar</label>
+        <input type="submit" name="submit" id="submit">
+
+    </form>
+
+    <form action="procesar.php" method="post" enctype="multipart/form-data">
+        <label for="nombre-receta">Nombre de receta: </label>
+        <input type="text" name="nombre-receta" id="nombre-receta" maxlength="80" required title="Maximo 80 caracteres">
+        <br>
+        <label for="tipo-receta">Tipo de receta: </label>
+        <select name="tipo-receta" id="tipo-receta">
+            <optgroup>
+                <option value="carne">Carne</option>
+                <option value="pescado">Pescado</option>
+                <option value="fruta">Fruta</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="imagen-receta">Imagen de la receta: </label>
+        <input type="file" name="imagen-receta" id="imagen-receta" required>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <form action="procesar.php" method="post">
+        <h3>Mensaje al profesor</h3>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <label for="turno">Turno: </label>
+        <select name="turno" id="turno">
+            <option value="mañana">Mañana</option>
+            <option value="tarde">Tarde</option>
+        </select>
+        <br>
+        <label for="materias">Materias: </label>
+        <select name="materias" id="materias">
+            <optgroup>
+                <option value="fisica">Física</option>
+                <option value="quimica">Química</option>
+                <option value="biologia">Biología</option>
+                <option value="matematicas">Matemáticas</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="mensaje">Mensaje: </label>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="4"></textarea>
+        <br>
+        <input type="hidden" name="origen" value="Academia">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <form action="procesar.php" method="post">
+        <label for="precio">Precio: </label>
+        <input type="number" name="precio" id="precio" step="0.01" required>
+        <br>
+        <label for="iva">IVA: </label>
+        <select name="iva" id="iva">
+            <option value="10">Reducido (10%)</option>
+            <option value="21">Normal (21%)</option>
+        </select>
+        <br>
+        <label for="resultado">Resultado: </label>
+        <input type="text" id="resultado" readonly>
+        <br>
+        <button type="button" onclick="calcularIVA()">Calcular</button>
+    </form>
+    
+    <script>
+        function calcularIVA() {
+            const precio = parseFloat(document.getElementById('precio').value);
+            const iva = parseFloat(document.getElementById('iva').value);
+            const total = precio + (precio * iva / 100);
+            document.getElementById('resultado').value = total.toFixed(2);
+        }
+    </script>
+
+
+    
+    
+
+</body>
+</html>

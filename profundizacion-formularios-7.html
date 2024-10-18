@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profundizacion formularios 7</title>
+</head>
+<body>
+    <form action="procesar.php" method="get" onsubmit="return verificarColor()">
+        <label for="color">Selecciona un color: </label>
+        <select name="color" id="color">
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="rojo">Rojo</option>
+            <option value="naranja">Naranja</option>
+            <option value="rosa">Rosa</option>
+            <option value="marron">Marrón</option>
+        </select>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <script>
+        function verificarColor() {
+            const colorSeleccionado = document.getElementById('color').value;
+            const colorPensado = Math.floor(Math.random() * 6);
+            const colores = ["azul", "verde", "rojo", "naranja", "rosa", "marron"];
+            
+            return colorSeleccionado === colores[colorPensado];
+        }
+    </script>
+    
+</body>
+</html>

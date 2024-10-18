@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profundizacion formularios 9</title>
+</head>
+<body>
+    <form action="procesar.php" method="post">
+        <label for="num-tarjeta">Número de tarjeta: </label>
+        <input type="text" name="num-tarjeta" id="num-tarjeta" maxlength="16" pattern="\d{16}" required title="16 números sin espacios">
+        <br>
+        <label for="titular">Nombre del titular: </label>
+        <input type="text" name="titular" id="titular" required>
+        <br>
+        <label for="mes-caducidad">Mes de caducidad: </label>
+        <select name="mes-caducidad" id="mes-caducidad">
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">00</option>
+            <option value="11">01</option>
+            <option value="12">12</option>
+        </select>
+        <br>
+        <label for="anio-caducidad">Año de caducidad: </label>
+        <select name="anio-caducidad" id="anio-caducidad">
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+        </select>
+        <br>
+        <label for="cvv">Código de seguridad (CVV): </label>
+        <input type="password" name="cvv" id="cvv" maxlength="3" pattern="\d{3}" required>
+        <br>
+        <label for="notas">Notas: </label>
+        <textarea name="notas" id="notas" cols="60" rows="2"></textarea>
+        <br>
+        <input type="checkbox" name="guardar-datos" id="guardar-datos">
+        <span>Guardar datos para otras compras</span>
+        <br>
+        <button type="submit">Pagar</button>
+        <button type="reset">Cancelar</button>
+    </form>
+    
+    <form action="procesar.php" method="get">
+        <label for="palabra-clave">Palabra clave: </label>
+        <input type="text" name="palabra-clave" id="palabra-clave" required>
+        <br>
+        <label for="categoria">Categoría: </label>
+        <select name="categoria" id="categoria">
+            <option value="todas">Todas</option>
+            <option value="electronica">Electrónica</option>
+            <option value="ropa">Ropa</option>
+            <option value="hogar">Hogar</option>
+        </select>
+        <br>
+        <label for="precio-min">Precio mínimo: </label>
+        <input type="number" name="precio-min" id="precio-min">
+        <br>
+        <label for="precio-max">Precio máximo: </label>
+        <input type="number" name="precio-max" id="precio-max">
+        <br>
+        <label for="ordenar">Ordenar por: </label>
+        <select name="ordenar" id="ordenar">
+            <option value="relevancia">Relevancia</option>
+            <option value="precio">Precio</option>
+        </select>
+        <br>
+        <button type="submit">Buscar</button>
+    </form>
+</body>
+</html>

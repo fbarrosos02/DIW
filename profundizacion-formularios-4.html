@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profundizacion formularios 4</title>
+</head>
+<body>
+    <form action="procesar.php" method="post">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" name="apellidos" id="apellidos">
+        <br>
+        <label for="telefono">Telefono</label>
+        <input type="text" name="telefono" id="telefono" pattern="\d{3} \d{2} \d{2} \d{2}" title="El formatode ser: xxx xx xx xx">
+        <br>
+        <label for="contraseña">Contraseña</label>
+        <input type="password" name="contraseña" id="contraseña" minlength="8" title="minimo 8 caracteres">
+        <br>
+        <label for="areas-interes">Areas de interes: </label>
+        <select name="areas-interes" id="areas-interes">
+            <optgroup>
+                <option value="programacion">Programacion</option>
+                <option value="diseño">Diseño</option>
+                <option value="ciencias">Ciencias</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="fecha-nacimiento">Fecha de nacimiento</label>
+        <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
+        <br>
+        <label for="clausula-aceptacion"></label>
+        <input type="checkbox" name="clausula-aceptacion" id="clausula-aceptacion">
+        <span>Acepto los térmnos de protección de datos</span>
+        <br>
+        <label for="submit">Enviar</label>
+        <input type="submit" name="submit" id="submit">
+
+    </form>
+</body>
+</html>

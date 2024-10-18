@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profundizacion de formularios 1</title>
+</head>
+<body>
+    <form action="procesar.php" method="get">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" maxlength="20" required>
+        <br>
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" name="apellidos" id="apellidos" maxlength="20" required>
+        <br>
+        <label for="sexo">Sexo: </label>
+        <span>Hombre</span><input type="radio" name="sexo" id="sexo" value="hombre">
+        <span>Mujer</span><input type="radio" name="sexo" id="sexo" value="mujer">
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="nov&ofertas"></label>
+        <input type="checkbox" name="nov&ofertas" id="nov&ofertas" checked>
+        <span>Deseo recibir información sobre novedades y ofertas</span>
+        <br>
+        <input type="checkbox" name="protdatos" id="protdatos" >
+        <span>Acepto las condiciones generales del sitio sobre protección de datos</span>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
